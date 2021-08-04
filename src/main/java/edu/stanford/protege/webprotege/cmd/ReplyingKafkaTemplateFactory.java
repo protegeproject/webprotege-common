@@ -1,4 +1,4 @@
-package edu.stanford.protege.webprotege.msg;
+package edu.stanford.protege.webprotege.cmd;
 
 import org.springframework.kafka.requestreply.ReplyingKafkaTemplate;
 

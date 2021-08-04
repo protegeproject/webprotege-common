@@ -1,4 +1,4 @@
-package edu.stanford.protege.webprotege.msg;
+package edu.stanford.protege.webprotege.cmd;
 
 import edu.stanford.protege.webprotege.WebProtegeCommonConfiguration;
 import org.junit.jupiter.api.Test;
@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.kafka.test.context.EmbeddedKafka;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.test.annotation.DirtiesContext;
 

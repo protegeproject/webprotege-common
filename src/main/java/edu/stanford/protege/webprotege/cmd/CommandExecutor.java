@@ -1,4 +1,4 @@
-package edu.stanford.protege.webprotege.msg;
+package edu.stanford.protege.webprotege.cmd;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

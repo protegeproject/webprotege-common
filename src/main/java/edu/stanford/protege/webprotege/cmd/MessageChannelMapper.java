@@ -1,6 +1,4 @@
-package edu.stanford.protege.webprotege.msg;
-
-import org.springframework.beans.factory.annotation.Value;
+package edu.stanford.protege.webprotege.cmd;
 
 /**
  * Matthew Horridge
