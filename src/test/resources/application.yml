@@ -1,7 +1,0 @@
-spring:
-  application:
-    name: TestService
-  kafka:
-    consumer:
-      auto-offset-reset: earliest
-      group-id: ${spring.application.name}

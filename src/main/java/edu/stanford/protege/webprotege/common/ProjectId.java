@@ -11,7 +11,7 @@ public record ProjectId(@Nonnull String id) {
     @JsonCreator
     @Nonnull
     public static ProjectId valueOf(String id) {
-        return new ProjectId(id);
+        return new ProjectId(UUID.fromString(id).toString());
     }
 
     /**

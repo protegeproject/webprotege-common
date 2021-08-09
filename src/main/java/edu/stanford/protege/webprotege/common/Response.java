@@ -1,9 +1,9 @@
-package edu.stanford.protege.webprotege.common.cmd;
+package edu.stanford.protege.webprotege.common;
 
 /**
  * Matthew Horridge
  * Stanford Center for Biomedical Informatics Research
- * 2021-07-30
+ * 2021-08-09
  */
 public interface Response {
 

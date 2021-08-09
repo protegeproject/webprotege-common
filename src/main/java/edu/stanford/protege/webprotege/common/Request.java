@@ -1,4 +1,4 @@
-package edu.stanford.protege.webprotege.common.cmd;
+package edu.stanford.protege.webprotege.common;
 
 /**
  * Matthew Horridge
