@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import javax.annotation.Nonnull;
 import java.util.UUID;
 
-public record ProjectId(@Nonnull String id) {
+public record ProjectId(@Nonnull String id) implements ValueObject {
 
     @JsonCreator
     @Nonnull
@@ -22,9 +22,18 @@ public record ProjectId(@Nonnull String id) {
         return valueOf(UUID.randomUUID().toString());
     }
 
+    public static ProjectId getNil() {
+        return valueOf("00000000-0000-0000-0000-000000000000");
+    }
+
     @JsonValue
     @Override
     public String id() {
+        return id;
+    }
+
+    @Override
+    public String value() {
         return id;
     }
 }
