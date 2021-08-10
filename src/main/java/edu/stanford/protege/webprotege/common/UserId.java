@@ -11,7 +11,7 @@ import javax.annotation.Nonnull;
  * Stanford Center for Biomedical Informatics Research
  * 2021-07-30
  */
-public record UserId(@Nonnull String id) implements ValueObject {
+public record UserId(@Nonnull String id) implements ValueObject, Comparable<UserId> {
 
     public static final String GUEST_USERNAME = "guest";
 
@@ -41,5 +41,14 @@ public record UserId(@Nonnull String id) implements ValueObject {
     @Override
     public String value() {
         return id;
+    }
+
+    @Override
+    public int compareTo(UserId o) {
+        var diff = this.id.compareToIgnoreCase(o.id);
+        if(diff != 0) {
+            return diff;
+        }
+        return this.id.compareTo(o.id);
     }
 }
