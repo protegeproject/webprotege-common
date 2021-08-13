@@ -1,6 +1,5 @@
 package edu.stanford.protege.webprotege.common;
 
-import edu.stanford.protege.webprotege.common.ProjectId;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
