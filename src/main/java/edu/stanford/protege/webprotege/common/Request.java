@@ -5,7 +5,6 @@ package edu.stanford.protege.webprotege.common;
  * Stanford Center for Biomedical Informatics Research
  * 2021-07-30
  */
-public interface Request<R extends Response> {
+public interface Request<R extends Response> extends HasChannel {
 
-    String getChannel();
 }

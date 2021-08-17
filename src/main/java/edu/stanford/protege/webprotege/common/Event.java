@@ -5,10 +5,6 @@ package edu.stanford.protege.webprotege.common;
  * Stanford Center for Biomedical Informatics Research
  * 2021-08-17
  */
-public interface Event {
+public interface Event extends HasChannel {
 
-    /**
-     * Gets the channel name that this type of event is published to
-     */
-    String getChannel();
 }
