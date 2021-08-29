@@ -1,5 +1,7 @@
 package edu.stanford.protege.webprotege.common;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Matthew Horridge
  * Stanford Center for Biomedical Informatics Research
@@ -12,5 +14,6 @@ public interface HasChannel {
     /**
      * Gets the channel name that this type of object is published to
      */
+    @JsonIgnore
     String getChannel();
 }
