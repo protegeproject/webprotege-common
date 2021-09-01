@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
  * Stanford Center for Biomedical Informatics Research
  * 2021-08-09
  */
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME)
 public interface Response {
 
 }
