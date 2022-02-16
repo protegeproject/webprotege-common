@@ -35,15 +35,13 @@ public class EventId_TestCase {
     @Test
     void shouldSerialize() throws IOException {
         var jsonContent = tester.write(eventId);
-        assertThat(jsonContent).hasJsonPathStringValue("id", uuid);
+        assertThat(jsonContent.getJson().trim()).isEqualTo("\"" + uuid + "\"");
     }
 
     @Test
     void shouldDeserialize() throws IOException {
         var json = """
-                {
-                    "id" : "abcd1234-abcd-abcd-abcd-123456789abc"
-                }
+                "abcd1234-abcd-abcd-abcd-123456789abc"
                 """;
         var parsed = tester.parse(json);
         assertThat(parsed.getObject().id()).isEqualTo(uuid);

@@ -2,6 +2,7 @@ package edu.stanford.protege.webprotege.common;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 import javax.annotation.Nonnull;
 import java.util.Objects;
@@ -16,6 +17,12 @@ public record EventId(String id) {
         this.id = Objects.requireNonNull(id);
     }
 
+    @JsonValue
+    public String id() {
+        return id;
+    }
+
+
     /**
      * Create an EventId from a string representation of a UUID
      * @param id The UUID
@@ -23,7 +30,7 @@ public record EventId(String id) {
      */
     @Nonnull
     @JsonCreator
-    public static EventId valueOf(@Nonnull @JsonProperty("id") String id) {
+    public static EventId valueOf(@Nonnull String id) {
         return new EventId(id);
     }
 
