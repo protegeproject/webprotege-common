@@ -19,6 +19,7 @@ jobs:
           gpg-private-key: ${{secrets.GPG_PRIVATE_KEY}}
           gpg-passphrase: GPG_PASSPHRASE
       - name: Publish package
+        environment: publish
         run: mvn --batch-mode -Prelease deploy
         env:
           GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
