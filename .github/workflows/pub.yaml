@@ -13,8 +13,8 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
           server-id: ossrh
-          server-username: OSSRH_USERNAME
-          server-password: OSSRH_TOKEN
+          server-username: ${OSSRH_USERNAME}
+          server-password: ${OSSRH_TOKEN}
           gpg-private-key: ${{secrets.GPG_PRIVATE_KEY}}
           gpg-passphrase: GPG_PASSPHRASE
       - name: Debug stuff
