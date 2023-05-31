@@ -7,7 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: hmarr/debug-action@v2
       - name: Set up Maven Central Repository
         uses: actions/setup-java@v3
         environment: publish
@@ -15,14 +14,16 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
           server-id: ossrh
-          server-username: ${{secrets.OSSRH_USERNAME}}
-          server-password: ${{secrets.OSSRH_TOKEN}}
-          gpg-private-key: ${{secrets.GPG_PRIVATE_KEY}}
+          server-username: OSSRH_USERNAME
+          server-password: OSSRH_TOKEN
+          gpg-private-key: GPG_PRIVATE_KEY
           gpg-passphrase: GPG_PASSPHRASE
+      - name: Debug stuff
+        run: echo "The value of the UN is $OSSRH_USERNAME"
       - name: Publish package
-        with:
-          environment: publish
         run: mvn --batch-mode -Prelease deploy
-        env:
-          GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
-          MAVEN_PASSWORD: ${{secrets.OSSRH_TOKEN}}
+env:
+  GPG_PRIVATE_KEY: ${{secrets.GPG_PRIVATE_KEY}}
+  GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
+  OSSRH_USERNAME: ${{secrets.OSSRH_USERNAME}}
+  OSSRH_TOKEN: ${{secrets.OSSRH_TOKEN}}
