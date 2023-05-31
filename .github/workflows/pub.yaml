@@ -19,7 +19,7 @@ jobs:
           gpg-private-key: GPG_PRIVATE_KEY
           gpg-passphrase: GPG_PASSPHRASE
       - name: Debug stuff
-        run: echo "The value of the UN is $OSSRH_USERNAME"
+        run: cat /home/runner/.m2/settings.xml
       - name: Publish package
         run: mvn --batch-mode -Prelease deploy
 env:
