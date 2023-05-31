@@ -7,8 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Debug vars
-        run: echo "The value is ${env.OSSRH_TOKEN}"
       - name: Set up Maven Central Repository
         uses: actions/setup-java@v3
         with:
