@@ -15,14 +15,13 @@ jobs:
           server-id: ossrh
           server-username: OSSRH_USERNAME
           server-password: OSSRH_TOKEN
-          gpg-private-key: GPG_PRIVATE_KEY
+          gpg-private-key: ${{secrets.GPG_PRIVATE_KEY}}
           gpg-passphrase: GPG_PASSPHRASE
       - name: Debug stuff
         run: cat /home/runner/.m2/settings.xml
       - name: Publish package
         run: mvn --batch-mode -Prelease deploy
 env:
-  GPG_PRIVATE_KEY: ${{secrets.GPG_PRIVATE_KEY}}
   GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
   OSSRH_USERNAME: ${{secrets.OSSRH_USERNAME}}
   OSSRH_TOKEN: ${{secrets.OSSRH_TOKEN}}
