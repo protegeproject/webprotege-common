@@ -2,6 +2,7 @@ package edu.stanford.protege.webprotege.common;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.google.auto.value.AutoValue;
 
 
@@ -9,7 +10,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 @AutoValue
-
+@JsonTypeName(ShortForm.SHORT_FORM)
 public abstract class ShortForm {
 
     public static final String DICTIONARY_LANGUAGE = "dictionaryLanguage";
