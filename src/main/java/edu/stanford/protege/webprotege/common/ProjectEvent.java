@@ -1,5 +1,7 @@
 package edu.stanford.protege.webprotege.common;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 import javax.annotation.Nonnull;
 
 /**
@@ -9,6 +11,10 @@ import javax.annotation.Nonnull;
  *
  * An {@link Event} that is specific to a Project.
  */
+
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME
+)
 public interface ProjectEvent extends Event {
 
     @Nonnull
