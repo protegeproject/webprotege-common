@@ -6,7 +6,7 @@
 
     <groupId>edu.stanford.protege</groupId>
     <artifactId>webprotege-common</artifactId>
-    <version>0.9.6</version>
+    <version>0.9.7</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
