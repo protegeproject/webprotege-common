@@ -4,9 +4,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 import javax.annotation.Nonnull;
+import java.io.Serializable;
 import java.util.UUID;
 
-public record ProjectId(@Nonnull String id) implements ValueObject {
+public record ProjectId(@Nonnull String id) implements ValueObject, Serializable {
 
     @JsonCreator
     @Nonnull

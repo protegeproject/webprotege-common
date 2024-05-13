@@ -2,6 +2,9 @@ package edu.stanford.protege.webprotege.common;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.Serializable;
+
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -12,6 +15,10 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  */
 public class ProjectId_Tests {
 
+    @Test
+    void shouldBeSerializable() {
+        assertThat(ProjectId.class).isAssignableTo(Serializable.class);
+    }
 
     @Test
     public void equalsShouldReturnTrueForObjectsWithSameId() {
