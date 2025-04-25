@@ -13,6 +13,7 @@ public interface HasChannel {
 
     /**
      * Gets the channel name that this type of object is published to
+     *
      */
     @JsonIgnore
     String getChannel();
