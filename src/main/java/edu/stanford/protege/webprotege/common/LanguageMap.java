@@ -24,6 +24,7 @@ public abstract class LanguageMap {
         return get(ImmutableMap.of(lang, value));
     }
 
+
     @JsonCreator
     @Nonnull
     public static LanguageMap get(Map<String, String> langMap) {
